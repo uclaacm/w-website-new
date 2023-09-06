@@ -1,4 +1,4 @@
-const committee = 'ICPC';
+const committee = 'W';
 module.exports = {
   committee: committee,
 };
