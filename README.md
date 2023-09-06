@@ -1,9 +1,9 @@
 # Your ACM Project Title Here!
 
-![Production Build](https://github.com/uclaacm/next-ts-starter-template/workflows/Production%20Build/badge.svg)
+![Production Build](https://github.com/uclaacm/w-website-new/workflows/Production%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4932fc43-c02a-4724-bfc0-0253ac602219/deploy-status)](https://app.netlify.com/sites/next-ts-starter-template/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8bc7d2a6-1780-4c50-b7c1-6f8ffec2eb45/deploy-status)](https://app.netlify.com/sites/spiffy-pony-f4e5cd/deploys)
 
 What's this? This is a template repository that sets up a few minor systems for a Next.js React micro-app with typescript, which is something that we've done frequently at ACM here at UCLA. This was based off of [TeachLA's React Starter](https://github.com/uclaacm/teach-la-ts-react-starter/blob/main/netlify.toml) and some Next.js project set-up within [opensource @ ucla](https://github.com/uclaacm/opensource).
 Here's what it does:
@@ -32,27 +32,27 @@ Things you should do **after using this as a template**:
 
 - [ ] find-and-replace `YOUR_PROJECT_URL_HERE` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
 - [ ] add to the Overview section above with any desired information about what your website is for.
-- [ ] set up [Netlify](https://www.netlify.com/) for this app - talk to the current dev team director: arsh (`@ArshMalik02`) if you need access to the ACM UCLA Netlify team.
-- [ ] turn on "Automatically delete head branches" in GitHub `Settings > Options`
-- [ ] in `Settings > Branches`, create a branch protection rule for `main` that requires PR reviews. Also require status checks, like passing `build`.
-- [ ] _only_ enable squash merging in Github `Settings > Options > Merge Button` (and disable merge commits and rebase merging).
+- [ ] ~~set up [Netlify](https://www.netlify.com/) for this app - talk to the current dev team director: arsh (`@ArshMalik02`) if you need access to the ACM UCLA Netlify team.~~
+- [ ] ~~turn on "Automatically delete head branches" in GitHub `Settings > Options`~~
+- [ ] ~~in `Settings > Branches`, create a branch protection rule for `main` that requires PR reviews. Also require status checks, like passing `build`.~~
+- [ ] ~~_only_ enable squash merging in Github `Settings > Options > Merge Button` (and disable merge commits and rebase merging).~~
 - [ ] this is a reminder to periodically run accessibility checks & Search Engine Optimization on your project by running `inspect element / developer tools > Lighthouse`
-- [ ] update the README badges for the GitHub Actions and Netlify with the correct links!
+- [ ] ~~update the README badges for the GitHub Actions and Netlify with the correct links!~~
 - [ ] update and delete this documentation!
-- [ ] update `public/index.html` to have a description and title
-- [ ] update `public/favicon.svg` as needed
+- [ ] ~~update `public/index.html` to have a description and title~~
+- [ ] ~~update `public/favicon.svg` as needed~~
 - [ ] contact Regina Wang (`@reginawang99`), Matthew Nieva (`@matthewcn56`), Matthew Wang (`@mattxwang`)or Jiin Kim (`@doubleiis02`) with any questions about our quickstarter template set-up.
 
-## Loading in Committee Info (can also delete this section when done)
+## ~~Loading in Committee Info (can also delete this section when done)~~
 
-Thanks for using our template for your committee's website!
+~~Thanks for using our template for your committee's website!~~
 
-To build the site with your committee-specific information, you will fill out two fields in the global_variables.module.scss file, which can be found in the styles folder. (full path: ./styles/global_variables.module.scss)
+~~To build the site with your committee-specific information, you will fill out two fields in the global_variables.module.scss file, which can be found in the styles folder. (full path: ./styles/global_variables.module.scss)~~
 
-Next to $committee-color, please replace the sample color with the hex code of your committee's color, which will be the accent color for the overall site.
-Next to $committee, please replace the sample text with your committee's name, spelled and capitalized properly, exactly how it appears on the Committee Info spreadsheet. (example: TeachLA, ICPC, W are all valid. teach la, Icpc, w are invalid.) We will be using this to properly scrape your committee's information, so it is super important that this variable is correctly set! Please contact Elizabeth Kim (`@elizabethkim11`) if you would like your committee's name to be reflected differently than how it appears on the spreadsheet.
+~~Next to $committee-color, please replace the sample color with the hex code of your committee's color, which will be the accent color for the overall site.
+Next to $committee, please replace the sample text with your committee's name, spelled and capitalized properly, exactly how it appears on the Committee Info spreadsheet. (example: TeachLA, ICPC, W are all valid. teach la, Icpc, w are invalid.) We will be using this to properly scrape your committee's information, so it is super important that this variable is correctly set! Please contact Elizabeth Kim (`@elizabethkim11`) if you would like your committee's name to be reflected differently than how it appears on the spreadsheet.~~
 
-You will also fill out another field for your committee name in the global-variables.js file, which is located in the scripts folder. (full path: ./scripts/global-variables.js) Replace the sample committee name in the string on line 1 with your committee's name. Please follow the same guidelines as above for the committee name input.
+~~You will also fill out another field for your committee name in the global-variables.js file, which is located in the scripts folder. (full path: ./scripts/global-variables.js) Replace the sample committee name in the string on line 1 with your committee's name. Please follow the same guidelines as above for the committee name input.~~
 
 ## Spreadsheet Image Guidelines
 
