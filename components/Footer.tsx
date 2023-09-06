@@ -56,7 +56,7 @@ const Footer = () => {
           </section>
           <section className={styles.footerlogo}>
             <a
-              href={`https://${committeeData[0].igLink}`}
+              href={`${committeeData[0].igLink}`}
               target="_blank"
               rel="noreferrer"
             >
@@ -70,7 +70,7 @@ const Footer = () => {
           </section>
           <section className={styles.footerlogo}>
             <a
-              href={`https://${committeeData[0].dcLink}`}
+              href={`${committeeData[0].dcLink}`}
               target="_blank"
               rel="noreferrer"
             >

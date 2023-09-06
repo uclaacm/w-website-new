@@ -69,7 +69,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="https://acm.cs.ucla.edu/internship">
                   <button>Join Us</button>
                 </Link>
               </li>
