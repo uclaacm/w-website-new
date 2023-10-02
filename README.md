@@ -1,4 +1,4 @@
-# Your ACM Project Title Here!
+# ACM W Website!
 
 ![Production Build](https://github.com/uclaacm/w-website-new/workflows/Production%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -22,37 +22,7 @@ Here's what it does:
 
 ## Overview
 
-Hello! This website is built by the ACM dev team with Next.js on top of React and deployed on Netlify. Under the hood, we use both ESLint and Stylelint to lint our JS and CSS code respectively.
-
-## Things You Should Do (and then delete this section)
-
-Thanks for using our template! We hope this makes your life developing significantly easier.
-
-Things you should do **after using this as a template**:
-
-- [ ] find-and-replace `YOUR_PROJECT_URL_HERE` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
-- [ ] add to the Overview section above with any desired information about what your website is for.
-- [ ] ~~set up [Netlify](https://www.netlify.com/) for this app - talk to the current dev team director: arsh (`@ArshMalik02`) if you need access to the ACM UCLA Netlify team.~~
-- [ ] ~~turn on "Automatically delete head branches" in GitHub `Settings > Options`~~
-- [ ] ~~in `Settings > Branches`, create a branch protection rule for `main` that requires PR reviews. Also require status checks, like passing `build`.~~
-- [ ] ~~_only_ enable squash merging in Github `Settings > Options > Merge Button` (and disable merge commits and rebase merging).~~
-- [ ] this is a reminder to periodically run accessibility checks & Search Engine Optimization on your project by running `inspect element / developer tools > Lighthouse`
-- [ ] ~~update the README badges for the GitHub Actions and Netlify with the correct links!~~
-- [ ] update and delete this documentation!
-- [ ] ~~update `public/index.html` to have a description and title~~
-- [ ] ~~update `public/favicon.svg` as needed~~
-- [ ] contact Regina Wang (`@reginawang99`), Matthew Nieva (`@matthewcn56`), Matthew Wang (`@mattxwang`)or Jiin Kim (`@doubleiis02`) with any questions about our quickstarter template set-up.
-
-## ~~Loading in Committee Info (can also delete this section when done)~~
-
-~~Thanks for using our template for your committee's website!~~
-
-~~To build the site with your committee-specific information, you will fill out two fields in the global_variables.module.scss file, which can be found in the styles folder. (full path: ./styles/global_variables.module.scss)~~
-
-~~Next to $committee-color, please replace the sample color with the hex code of your committee's color, which will be the accent color for the overall site.
-Next to $committee, please replace the sample text with your committee's name, spelled and capitalized properly, exactly how it appears on the Committee Info spreadsheet. (example: TeachLA, ICPC, W are all valid. teach la, Icpc, w are invalid.) We will be using this to properly scrape your committee's information, so it is super important that this variable is correctly set! Please contact Elizabeth Kim (`@elizabethkim11`) if you would like your committee's name to be reflected differently than how it appears on the spreadsheet.~~
-
-~~You will also fill out another field for your committee name in the global-variables.js file, which is located in the scripts folder. (full path: ./scripts/global-variables.js) Replace the sample committee name in the string on line 1 with your committee's name. Please follow the same guidelines as above for the committee name input.~~
+Hello! Thank you checking out the new git repository for the ACM-W website! If you want to be involved or learn more, please feel to reach out to us at: w@uclaacm.com
 
 ## Spreadsheet Image Guidelines
 
@@ -67,8 +37,8 @@ We'll use a really common Node.js project workflow + Yarn!
 First, let's clone our repository, and install all of our yarn dependencies:
 
 ```
-git clone https://github.com/uclaacm/YOUR_PROJECT_URL_HERE.git
-cd YOUR_PROJECT_URL_HERE
+git clone https://github.com/uclaacm/w-website-new.git
+cd w-website-new
 ```
 
 The instructions to install Node.js will be different based on which platform you're running. It's heavily advised to install your Node.js using NVM (Node Version Manager) because it's easy to manage a standardized version and update it as needed.
@@ -113,7 +83,7 @@ yarn run build
 
 ## Contribution Workflow
 
-Thanks for your interest in contributing to YOUR_PROJECT_URL_HERE! ❤️
+Thanks for your interest in contributing to w-website-new! ❤️
 
 Here's a quick guide on how to get started.
 
@@ -122,7 +92,7 @@ Here's a quick guide on how to get started.
 3. Beep boop away!
 4. **Before you push**, make sure your app runs with `yarn start`. If there are any errors, our CI/CD service will **reject your build**.
 5. Once you're ready, stage and commit your changes!
-6. Make a [pull request](https://github.com/uclaacm/YOUR_PROJECT_URL_HERE/pulls) with your changes, and let someone on your project team know.
+6. Make a [pull request](https://github.com/uclaacm/w-website-new/pulls) with your changes, and let someone on your project team know.
    a. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info!
 7. If your code passes code review, then we can **squash and merge** it into `main`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
