@@ -16,6 +16,7 @@ const getCssStringFromCommittee = (committee) => {
     case 'icpc':
     case 'studio':
     case 'w':
+    case 'cloud':
       return committee.toLowerCase();
     default:
       throw new Error(`Unrecognized string ${committee}`);
