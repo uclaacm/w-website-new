@@ -55,8 +55,18 @@ export default function Events({ events }: Props): JSX.Element {
     (event) => event.committee === committee,
   );
 
+  const uniqueEvents = Array.from(
+    // filters out identical events, ignoring "id" field
+    new Map(
+      filteredEvents.map((event) => [
+        JSON.stringify({ ...event, id: undefined }),
+        event,
+      ]),
+    ).values(),
+  );
+
   if (committee === 'board') {
-    filteredEvents.shift();
+    uniqueEvents.shift();
   }
 
   return (
@@ -70,7 +80,7 @@ export default function Events({ events }: Props): JSX.Element {
         </p> */}
         <div>
           <h2 className={styles.subtitle}>Upcoming Events</h2>
-          {filteredEvents.map((event, index) => {
+          {uniqueEvents.map((event, index) => {
             const start = format(new Date(event.start), 'h:mma');
             const end = format(new Date(event.end), 'h:mma');
             const startDate = format(new Date(event.start), 'E MMM d');
