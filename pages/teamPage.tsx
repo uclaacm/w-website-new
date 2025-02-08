@@ -2,8 +2,8 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 import BoardCard from '../components/BoardCard';
 import MainLayout from '../components/MainLayout';
-import getOfficerData from '../getOfficers';
-import vars from '../styles/global_variables.module.scss';
+//import getOfficerData from '../getOfficers';
+//import vars from '../styles/global_variables.module.scss';
 import styles from '../styles/Teampage.module.scss';
 
 interface Officer {
@@ -54,8 +54,38 @@ export default function teamPage({ officers }: Props) {
   );
 }
 export const getStaticProps: GetStaticProps = async () => {
-  const committee = vars.committee.toLowerCase();
-  const officers = await getOfficerData(committee);
+  //const committee = vars.committee.toLowerCase();
+  //const officers = await getOfficerData(committee);
+  const officers = [
+    {
+      id: 1,
+      position: 'President',
+      name: 'Alex Johnson',
+      pronouns: 'he/him',
+      email: 'alex.johnson@example.com',
+      github: 'alexjohnson',
+      imageURL: '/images/alex-johnson.jpg',
+    },
+    {
+      id: 2,
+      position: 'Vice President',
+      name: 'Maria Gonzalez',
+      pronouns: 'she/her',
+      email: 'maria.gonzalez@example.com',
+      github: 'mariagonzalez',
+      imageURL: '/images/maria-gonzalez.jpg',
+    },
+    {
+      id: 3,
+      position: 'Treasurer',
+      name: 'Samuel Lee',
+      pronouns: 'they/them',
+      email: 'samuel.lee@example.com',
+      github: 'samuellee',
+      imageURL: '/images/samuel-lee.jpg',
+    },
+  ];
+
   return {
     props: {
       officers,
