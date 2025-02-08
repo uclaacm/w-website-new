@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
 import EventCard from '../components/EventCard';
 import MainLayout from '../components/MainLayout';
-import getAllEvents from '../scripts/event-generator-sheets.mjs';
+//import getAllEvents from '../scripts/event-generator-sheets.mjs';
 import styles from '../styles/Events.module.scss';
 import vars from '../styles/global_variables.module.scss';
 
@@ -111,8 +111,35 @@ export default function Events({ events }: Props): JSX.Element {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const events = await getAllEvents();
-  // Attempt to replace new lines with <br/>, doesn't work
+  //const events = await getAllEvents();
+  const events = [
+    {
+      id: 0,
+      title: 'Sample Event 1',
+      description: 'This is a sample description for Event 1.',
+      location: 'Location 1',
+      start: '2025-02-10T10:00:00',
+      end: '2025-02-10T12:00:00',
+      committee: 'sample',
+      event_type: 'Workshop',
+      registration_link: 'https://example.com/register',
+      max_capacity: 50,
+      banner: '/images/sample-banner.jpg',
+    },
+    {
+      id: 1,
+      title: 'Sample Event 2',
+      description: 'This is a sample description for Event 2.',
+      location: 'Location 2',
+      start: '2025-02-15T14:00:00',
+      end: '2025-02-15T16:00:00',
+      committee: 'sample',
+      event_type: 'Seminar',
+      registration_link: 'https://example.com/register',
+      max_capacity: 30,
+      banner: '/images/sample-banner2.jpg',
+    },
+  ];
   // const processedEvents = events.map((event) => (
   //  {...event, description: <>{event.description.replace(/\n/g, '<br/>')}</>}));
   // console.log(processedEvents);
