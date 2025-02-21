@@ -45,9 +45,9 @@ const Navbar = () => {
             <Link href="/">
               <a className="force-child-display-block">
                 <Image
-                  src={committeeData[0].logoLink}
-                  width={106}
-                  height={40}
+                  src='/wlogo.png'
+                  width={150}
+                  height={80}
                   alt="Open Source at ACM Home"
                 />
               </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
             >
               <li>
                 <Link href="/teamPage">
-                  <a>Team</a>
+                  <a className={styles['nav-item-list']}>Team</a>
                 </Link>
               </li>
               <li>

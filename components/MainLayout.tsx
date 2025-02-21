@@ -22,7 +22,6 @@ export default function MainLayout(props: LayoutProps) {
       </Head>
       <Navbar />
       <main>{props.children}</main>
-      <Footer />
     </>
   );
 }

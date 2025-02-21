@@ -12,11 +12,11 @@
     "pre-commit": "yarn lint-fix"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "date-fns": "^2.30.0",
     "dotenv": "^16.0.3",
     "fs": "^0.0.1-security",
     "googleapis": "^118.0.0",
-    "moment": "^2.29.4",
     "moment": "^2.29.4",
     "next": "12",
     "next-seo": "^6.0.0",
