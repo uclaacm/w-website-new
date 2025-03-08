@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import styles from '../styles/Navbar.module.scss';
+import wlogo from '../public/wlogo.webp';
 
 interface CommitteeData {
   committee: string;
@@ -45,7 +46,7 @@ const Navbar = () => {
             <Link href="/">
               <a className="force-child-display-block">
                 <Image
-                  src='/wlogo.png'
+                  src={wlogo}
                   width={150}
                   height={80}
                   alt="Open Source at ACM Home"
