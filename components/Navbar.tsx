@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
-import styles from '../styles/Navbar.module.scss';
 import wlogo from '../public/wlogo.webp';
+import styles from '../styles/Navbar.module.scss';
 
 interface CommitteeData {
   committee: string;
