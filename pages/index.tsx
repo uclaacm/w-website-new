@@ -13,6 +13,13 @@ import icon1 from '../public/icon1.png';
 import illustration from '../public/Illustration2.png';
 import ins from '../public/ins.png';
 import linkedin from '../public/LinkedIn_logo_initials 1.png';
+import padding1 from '../public/padding1.png';
+import padding2 from '../public/padding2.png';
+import padding3 from '../public/padding3.png';
+import padding4 from '../public/padding4.png';
+import padding5 from '../public/padding5.png';
+import padding6 from '../public/padding6.png';
+import padding7 from '../public/padding7.png';
 //import getCommitteeInfo from '../scripts/landing-page-generator.mjs';
 import vars from '../styles/global_variables.module.scss';
 import styles from '../styles/LandingPage.module.scss';
@@ -45,6 +52,19 @@ export default function Home({ committee }: Props): JSX.Element {
           style={{ backgroundImage: `url(${committee.backgroundImg})` }}
         >
           <div className={styles['masthead-text']}>
+          <div
+            style={{
+              position: 'absolute',
+              top: '4vw', 
+              left: '2vw',
+              width: '6vw', 
+              maxWidth: '120px',
+              zIndex: 5,
+            }}
+          >
+              <Image src={padding1} alt="Decorative Icons" width={120} height={300} />
+          </div>
+
             <div>
               <div className={styles.heading} style={{ margin: '1%' }}>
                 <h1 className={styles.title} style={{ margin: '5%' }}>
@@ -89,8 +109,10 @@ export default function Home({ committee }: Props): JSX.Element {
                 width: '90vw',
                 marginTop: '15%',
                 display: 'flex',
+                position: 'relative',
                 alignItems: 'center',
                 justifyContent: 'space-between',
+                
               }}
             >
               <div style={{ width: '50vw' }}>
@@ -99,13 +121,38 @@ export default function Home({ committee }: Props): JSX.Element {
                 </div>
                 <p className={styles.description}>{committee.description}</p>
               </div>
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '10vw',
+                  right: '5vw',
+                  width: '10vw',
+                  maxWidth: '10vw',
+                  zIndex: 10
+                }}
+              >
+              <Image src={padding5} alt="Decorative Icons"  width={100} height={330} />
+              </div>
+
               <div style={{ width: '30vw', marginRight: '10%' }}>
                 <Image style={{ objectFit: 'cover' }} src={group} alt="Image" />
               </div>
+
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: '-7vw',
+                  width: '10vw',
+                }}
+              >
+              <Image src={padding2} alt="Decorative Icons"  width={320} height={280} />
+          </div>
             </div>
 
             {/* Event 1 */}
-            <div style={{ width: '100vw', marginBottom: '5%' }}>
+            <div style={{ width: '100vw', 
+              marginBottom: '5%',  }}>
               <div
                 style={{ marginTop: '5%', marginBottom: '5%' }}
                 className={styles.title}
@@ -131,8 +178,18 @@ export default function Home({ committee }: Props): JSX.Element {
                 </p>
               </span>
               <div
-                style={{ width: '70%', display: 'flex', alignItems: 'center' }}
+                style={{ width: '70%', display: 'flex', alignItems: 'center', }}
               >
+                <div
+                style={{
+                  marginLeft: '-60px', // pushes it into the page margin
+                  marginRight: '10px',
+                  width: '50px',
+                  flexShrink: 0,
+                }}
+              >
+              <Image src={padding3} alt="Decorative Icons"  width={35} height={70} />
+              </div>
                 <Image
                   style={{ objectFit: 'cover', width: '40%', height: 'auto' }}
                   src={event1}
@@ -149,6 +206,17 @@ export default function Home({ committee }: Props): JSX.Element {
                   just looking to get more involved, this event is for you. Come
                   for the fun, stay for the learning and community! 💻💥🙌
                 </p>
+
+                <div
+                  style={{
+                    marginLeft: 'auto',
+                    marginTop: 'clamp(-400px, -4vw, -200px)',
+                    marginRight: '-100px',
+                    width: 'clamp(60px, 8vw, 100px)',
+                  }}
+                >
+                  <Image src={padding6} alt="Right padding" layout="responsive" />
+                </div>
               </div>
             </div>
 
@@ -260,6 +328,18 @@ export default function Home({ committee }: Props): JSX.Element {
               <div
                 style={{ width: '70%', display: 'flex', alignItems: 'center' }}
               >
+
+              <div
+                style={{
+                  position: 'absolute',
+                  marginLeft: '-7vw',
+                  marginRight: '2vw',
+                  marginTop: '20vw',
+                }}
+              >
+              <Image src={padding4} alt="Decorative Icons"  width={150} height={220} />
+              </div>
+
                 <Image
                   style={{ objectFit: 'cover', width: '40%', height: 'auto' }}
                   src={event4}
@@ -274,6 +354,17 @@ export default function Home({ committee }: Props): JSX.Element {
                   Google, and Breakthrough Tech AI to host superb events. Stay
                   tuned for more! 👀💕
                 </p>
+
+                <div
+                  style={{
+                    marginLeft: 'auto',
+                    marginTop: 'clamp(-400px, -4vw, -200px)',
+                    marginRight: '-100px',
+                    width: 'clamp(120px, 10vw, 250px)',
+                  }}
+                >
+                  <Image src={padding7} alt="Right padding" layout="responsive" />
+                </div>
               </div>
             </div>
             <div
