@@ -52,18 +52,23 @@ export default function Home({ committee }: Props): JSX.Element {
           style={{ backgroundImage: `url(${committee.backgroundImg})` }}
         >
           <div className={styles['masthead-text']}>
-          <div
-            style={{
-              position: 'absolute',
-              top: '4vw', 
-              left: '2vw',
-              width: '6vw', 
-              maxWidth: '120px',
-              zIndex: 5,
-            }}
-          >
-              <Image src={padding1} alt="Decorative Icons" width={120} height={300} />
-          </div>
+            <div
+              style={{
+                position: 'absolute',
+                top: '4vw',
+                left: '2vw',
+                width: '6vw',
+                maxWidth: '120px',
+                zIndex: 5,
+              }}
+            >
+              <Image
+                src={padding1}
+                alt="Decorative Icons"
+                width={120}
+                height={300}
+              />
+            </div>
 
             <div>
               <div className={styles.heading} style={{ margin: '1%' }}>
@@ -86,7 +91,10 @@ export default function Home({ committee }: Props): JSX.Element {
                 >
                   Join Us
                 </a>
-                <Image src={ins} alt="Instagram logo" />
+                <a
+                  href="https://www.instagram.com/uclaacmw?igsh=NTc4MTIwNjQ2YQ=="
+                  target="_blank">
+                <Image src={ins} alt="Instagram logo" /></a>
                 <Image src={slack} alt="Slack logo" />
                 <Image src={linkedin} alt="Linkedin logo" />
               </div>
@@ -112,7 +120,6 @@ export default function Home({ committee }: Props): JSX.Element {
                 position: 'relative',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                
               }}
             >
               <div style={{ width: '50vw' }}>
@@ -128,10 +135,15 @@ export default function Home({ committee }: Props): JSX.Element {
                   right: '5vw',
                   width: '10vw',
                   maxWidth: '10vw',
-                  zIndex: 10
+                  zIndex: 10,
                 }}
               >
-              <Image src={padding5} alt="Decorative Icons"  width={100} height={330} />
+                <Image
+                  src={padding5}
+                  alt="Decorative Icons"
+                  width={100}
+                  height={330}
+                />
               </div>
 
               <div style={{ width: '30vw', marginRight: '10%' }}>
@@ -146,13 +158,17 @@ export default function Home({ committee }: Props): JSX.Element {
                   width: '10vw',
                 }}
               >
-              <Image src={padding2} alt="Decorative Icons"  width={320} height={280} />
-          </div>
+                <Image
+                  src={padding2}
+                  alt="Decorative Icons"
+                  width={320}
+                  height={280}
+                />
+              </div>
             </div>
 
             {/* Event 1 */}
-            <div style={{ width: '100vw', 
-              marginBottom: '5%',  }}>
+            <div style={{ width: '100vw', marginBottom: '5%' }}>
               <div
                 style={{ marginTop: '5%', marginBottom: '5%' }}
                 className={styles.title}
@@ -178,18 +194,23 @@ export default function Home({ committee }: Props): JSX.Element {
                 </p>
               </span>
               <div
-                style={{ width: '70%', display: 'flex', alignItems: 'center', }}
+                style={{ width: '70%', display: 'flex', alignItems: 'center' }}
               >
                 <div
-                style={{
-                  marginLeft: '-60px', // pushes it into the page margin
-                  marginRight: '10px',
-                  width: '50px',
-                  flexShrink: 0,
-                }}
-              >
-              <Image src={padding3} alt="Decorative Icons"  width={35} height={70} />
-              </div>
+                  style={{
+                    marginLeft: '-60px', // pushes it into the page margin
+                    marginRight: '10px',
+                    width: '50px',
+                    flexShrink: 0,
+                  }}
+                >
+                  <Image
+                    src={padding3}
+                    alt="Decorative Icons"
+                    width={35}
+                    height={70}
+                  />
+                </div>
                 <Image
                   style={{ objectFit: 'cover', width: '40%', height: 'auto' }}
                   src={event1}
@@ -215,7 +236,11 @@ export default function Home({ committee }: Props): JSX.Element {
                     width: 'clamp(60px, 8vw, 100px)',
                   }}
                 >
-                  <Image src={padding6} alt="Right padding" layout="responsive" />
+                  <Image
+                    src={padding6}
+                    alt="Right padding"
+                    layout="responsive"
+                  />
                 </div>
               </div>
             </div>
@@ -328,17 +353,21 @@ export default function Home({ committee }: Props): JSX.Element {
               <div
                 style={{ width: '70%', display: 'flex', alignItems: 'center' }}
               >
-
-              <div
-                style={{
-                  position: 'absolute',
-                  marginLeft: '-7vw',
-                  marginRight: '2vw',
-                  marginTop: '20vw',
-                }}
-              >
-              <Image src={padding4} alt="Decorative Icons"  width={150} height={220} />
-              </div>
+                <div
+                  style={{
+                    position: 'absolute',
+                    marginLeft: '-7vw',
+                    marginRight: '2vw',
+                    marginTop: '20vw',
+                  }}
+                >
+                  <Image
+                    src={padding4}
+                    alt="Decorative Icons"
+                    width={150}
+                    height={220}
+                  />
+                </div>
 
                 <Image
                   style={{ objectFit: 'cover', width: '40%', height: 'auto' }}
@@ -363,7 +392,11 @@ export default function Home({ committee }: Props): JSX.Element {
                     width: 'clamp(120px, 10vw, 250px)',
                   }}
                 >
-                  <Image src={padding7} alt="Right padding" layout="responsive" />
+                  <Image
+                    src={padding7}
+                    alt="Right padding"
+                    layout="responsive"
+                  />
                 </div>
               </div>
             </div>
