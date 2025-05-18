@@ -35,7 +35,6 @@ interface Committee {
   email: string;
   favicon: string;
   backgroundImg: string;
-  tttt: string;
 }
 
 interface Props {
@@ -93,8 +92,11 @@ export default function Home({ committee }: Props): JSX.Element {
                 </a>
                 <a
                   href="https://www.instagram.com/uclaacmw?igsh=NTc4MTIwNjQ2YQ=="
-                  target="_blank">
-                <Image src={ins} alt="Instagram logo" /></a>
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={ins} alt="Instagram logo" />
+                </a>
                 <Image src={slack} alt="Slack logo" />
                 <Image src={linkedin} alt="Linkedin logo" />
               </div>

@@ -6,8 +6,11 @@ import MainLayout from '../components/MainLayout';
 //import vars from '../styles/global_variables.module.scss';
 import styles from '../styles/Teampage.module.scss';
 
+const SHEET_ID = process.env.TEAM_SPREADSHEET_ID;
+const API_KEY = process.env.GOOGLE_SHEETS_API_KEY;
+const RANGE = process.env.TEAM_SPREADSHEET_RANGE;
+
 interface Officer {
-  id: number;
   position: string;
   name: string;
   pronouns: string;
@@ -24,12 +27,12 @@ export default function teamPage({ officers }: Props) {
     officerCards.push(
       <div className={styles.card} key={index}>
         <BoardCard
-          imageURL={officer.imageURL ?? ''}
+          position={officer.position ?? ''}
           name={officer.name ?? ''}
           pronouns={officer.pronouns ?? ''}
-          position={officer.position ?? ''}
-          github={officer.github ?? ''}
           email={officer.email ?? ''}
+          github={officer.github ?? ''}
+          imageURL={officer.imageURL ?? ''}
         />
       </div>,
     );
@@ -53,43 +56,49 @@ export default function teamPage({ officers }: Props) {
     </MainLayout>
   );
 }
+
+const getDriveDirectLink = (driveUrl: string): string => {
+  const match = driveUrl.match(
+    /(?:drive\.google\.com\/.*\/d\/|id=)([a-zA-Z0-9_-]+)/,
+  );
+  return match
+    ? `https://drive.google.com/uc?id=${match[1]}`
+    : '/images/default.jpg';
+};
+
+const fetchOfficerData = async () => {
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.values || data.values.length < 2) return [];
+
+  // Extract headers from the first row
+  const headers = data.values[0];
+  const rows = data.values.slice(1); // Skip header row
+
+  return rows.map((row: string) => {
+    const officer: Record<string, string> = {};
+    headers.forEach((header: string, index: number) => {
+      officer[header.toLowerCase()] = row[index] || ''; // Default to empty string if missing
+    });
+
+    return {
+      position: officer.position,
+      name: officer.name,
+      pronouns: officer.pronouns,
+      email: officer.email,
+      github: officer.github,
+      imageURL: getDriveDirectLink(officer.imageurl),
+    };
+  });
+};
+
 export const getStaticProps: GetStaticProps = async () => {
-  //const committee = vars.committee.toLowerCase();
-  //const officers = await getOfficerData(committee);
-  const officers = [
-    {
-      id: 1,
-      position: 'President',
-      name: 'Alex Johnson',
-      pronouns: 'he/him',
-      email: 'alex.johnson@example.com',
-      github: 'alexjohnson',
-      imageURL: '/images/alex-johnson.jpg',
-    },
-    {
-      id: 2,
-      position: 'Vice President',
-      name: 'Maria Gonzalez',
-      pronouns: 'she/her',
-      email: 'maria.gonzalez@example.com',
-      github: 'mariagonzalez',
-      imageURL: '/images/maria-gonzalez.jpg',
-    },
-    {
-      id: 3,
-      position: 'Treasurer',
-      name: 'Samuel Lee',
-      pronouns: 'they/them',
-      email: 'samuel.lee@example.com',
-      github: 'samuellee',
-      imageURL: '/images/samuel-lee.jpg',
-    },
-  ];
+  const officers = await fetchOfficerData();
 
   return {
-    props: {
-      officers,
-    },
-    revalidate: 3600,
+    props: { officers },
+    revalidate: 3600, // Regenerate every hour
   };
 };
