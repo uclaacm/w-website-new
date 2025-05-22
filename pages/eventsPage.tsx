@@ -53,6 +53,7 @@ export default function Events({ events }: Props) {
       eventCards.push(card);
     }
   });
+  pastEventCards.reverse();
   return (
     <MainLayout>
       <div className={styles.main}>
