@@ -6,6 +6,7 @@ interface CardInterface {
   header: string;
   body: string;
   time: string;
+  date: string;
   img: string;
 }
 function EventCard({ header, body, time, img }: CardInterface) {
