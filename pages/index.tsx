@@ -319,7 +319,7 @@ export default function Home({ committee }: Props): JSX.Element {
                   alt="event3"
                 />
                 <p
-                  style={{ width: '100%', marginLeft: '5%' }}
+                  style={{ width: '100%', marginLeft: '5%', marginRight: '5%' }}
                   className={styles.description}
                 >
                   Our mentorship program teams you up with an upperclassman,
