@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
+import wlogo from '../public/wlogo.webp';
 import styles from '../styles/Navbar.module.scss';
 
 interface CommitteeData {
@@ -45,9 +46,9 @@ const Navbar = () => {
             <Link href="/">
               <a className="force-child-display-block">
                 <Image
-                  src={committeeData[0].logoLink}
-                  width={106}
-                  height={40}
+                  src={wlogo}
+                  width={150}
+                  height={80}
                   alt="Open Source at ACM Home"
                 />
               </a>
@@ -60,7 +61,7 @@ const Navbar = () => {
             >
               <li>
                 <Link href="/teamPage">
-                  <a>Team</a>
+                  <a className={styles['nav-item-list']}>Team</a>
                 </Link>
               </li>
               <li>

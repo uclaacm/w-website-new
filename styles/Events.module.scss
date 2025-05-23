@@ -20,22 +20,30 @@
   color: #313235;
 }
 
-// .description {
-//   font-weight: 400;
-//   font-size: 18px;
-//   margin: 1rem;
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 1rem;
 
-//   /* Grey */
+  /* Grey */
 
-//   color: #313235;
-// }
+  color: #313235;
+}
 
 .subtitle {
   font-weight: 600;
   font-size: 32px;
-  margin-left: 1rem;
   margin-top: 2rem;
   color: vars.$committee-color;
+}
+
+.upcoming-events-title {
+  margin-top: 0;
+  text-align: center;
+}
+
+.centered-description {
+  text-align: center;
 }
 
 .card {
@@ -43,4 +51,46 @@
   text-align: center;
   margin-top: 2rem;
   margin-left: 1rem;
+}
+
+.past-card {
+  width: 45%;
+}
+
+.calendar-and-events-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.calendar-container {
+  flex: 1 1 50rem;
+}
+
+.calendar-container iframe {
+  width: 100%;
+  height: 70vh;
+}
+
+.events-section {
+  flex: 1 1 50rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  height: 70vh;
+  overflow: auto;
+}
+
+.past-events-container {
+  width: 100%;
+}
+
+.past-events-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }

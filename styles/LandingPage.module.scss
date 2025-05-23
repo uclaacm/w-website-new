@@ -37,6 +37,14 @@
   font-weight: 600;
 }
 
+.subtitle {
+  font-size: 3rem;
+  margin-top: -0.2rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: vars.$committee-color;
+}
+
 .description {
   padding: 1.25rem 0;
   margin: 0;

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import Footer from './Footer';
 import Navbar from './Navbar';
 
 interface LayoutProps {
@@ -22,7 +21,6 @@ export default function MainLayout(props: LayoutProps) {
       </Head>
       <Navbar />
       <main>{props.children}</main>
-      <Footer />
     </>
   );
 }
