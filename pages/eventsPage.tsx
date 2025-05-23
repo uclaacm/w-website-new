@@ -6,8 +6,8 @@ import styles from '../styles/Events.module.scss';
 
 const SHEET_ID = process.env.EVENTS_SPREADSHEET_ID;
 const API_KEY = process.env.GOOGLE_SHEETS_API_KEY;
-const RANGE_WINTER = process.env.EVENTS_SPREADSHEET_RANGE_WINTER;
-const RANGE_SPRING = process.env.EVENTS_SPREADSHEET_RANGE_SPRING;
+const RANGE_WINTER = "Winter '25!A1:E";
+const RANGE_SPRING = "Spring '25!A1:E";
 
 interface Event {
   name: string;

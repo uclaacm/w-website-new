@@ -8,7 +8,7 @@ import styles from '../styles/Teampage.module.scss';
 
 const SHEET_ID = process.env.TEAM_SPREADSHEET_ID;
 const API_KEY = process.env.GOOGLE_SHEETS_API_KEY;
-const RANGE = process.env.TEAM_SPREADSHEET_RANGE;
+const RANGE = 'Sheet1!A1:G';
 
 interface Officer {
   position: string;
