@@ -1,11 +1,11 @@
 @use "../styles/global_variables.module.scss" as vars;
 
 .container {
-  display: inline-block;
+  display: block;
   position: relative;
-  margin: 2rem, 4rem;
+  margin: 2rem 4rem;      
   width: 100%;
-  min-height: 100;
+  min-height: 100px;      
   border-radius: 15px;
   box-shadow: 0 0 10px 4px #f5f0f0;
 }
@@ -24,11 +24,13 @@
   line-height: 2em;
 }
 
+/* Your two-column area with image + details */
 .body {
   display: flex;
   gap: 4rem;
   overflow-wrap: break-word;
   font-size: 0.9rem;
+  align-items: flex-start;
 }
 
 .time {
@@ -40,8 +42,67 @@
   margin-top: 15px;
 }
 
-@media (max-width: 1175px) {
+/* Primary image rule */
+.image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  display: block;
+
+  /* ✅ critical: never let flex collapse the image to a vertical bar */
+  flex-shrink: 0;
+}
+
+/* ✅ Fallback: hit any <img> inside the card even if className isn't present */
+.container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  display: block;
+}
+
+
+@media (max-width: 1600px) {
+  .body { display: inline; }
+}
+
+/* --- Mobile rules --- */
+@media (max-width: 900px) {
+  /* Keep layout/border; just ensure vertical stacking space is fine */
+  .container { margin: 1rem 1rem; }
+
+  .description {
+    display: none !important;
+  }
+
+  /* If you can't add .description in markup, this is a safe alternative:
+     keep .body but switch it to column so the image stays visible. */
   .body {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .header {
+    font-size: 1.0rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
+
+  /* ✅ Force a visible image area on phones, no squish, no bar */
+  .image,
+  .container img {
+    height: 180px;      /* visible area */
+    object-fit: cover;  /* crop instead of stretch */
+    object-position: center;
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;     /* do not collapse */
   }
 }

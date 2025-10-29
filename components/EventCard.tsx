@@ -15,7 +15,7 @@ function EventCard({ header, body, time, img }: CardInterface) {
       <div className={styles.text}>
         <div className={styles.header}>{header}</div>
         <div className={styles.body}>
-          <div style={{ flex: '1' }}>{body}</div>
+          <div className={styles.description} style={{ flex: '1' }}>{body}</div>
           <Image src={img} width={300} height={300} />
         </div>
         <div className={styles.time}>

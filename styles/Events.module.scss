@@ -94,3 +94,25 @@
   flex-wrap: wrap;
   gap: 2rem;
 }
+
+/* --- Mobile layout --- */
+@media (max-width: 900px) {
+  .boardgrid,
+  .past-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .calendar-container iframe {
+    min-height: 350px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
