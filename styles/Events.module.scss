@@ -95,24 +95,60 @@
   gap: 2rem;
 }
 
-/* --- Mobile layout --- */
-@media (max-width: 900px) {
-  .boardgrid,
-  .past-events-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .card,
+  .past-card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .card {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .calendar-container iframe {
-    min-height: 350px;
-  }
-
-  .description {
-    font-size: 0.95rem;
+  .events-section {
+    max-width: 100%;
   }
 }
 
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .calendar-and-events-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .calendar-container,
+  .events-section {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .calendar-container iframe {
+    height: 50vh;
+  }
+
+  .events-section {
+    max-width: 100%;
+    padding: 0;
+    height: auto;
+  }
+
+  .card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: auto;
+  }
+
+  .past-card {
+    width: 100%;
+  }
+
+  .past-events-grid {
+    justify-content: center;
+  }
+}
