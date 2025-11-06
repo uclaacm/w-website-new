@@ -47,7 +47,7 @@ function EventCard({ header, body, time, img }: CardInterface) {
             height={20}
             alt="calendar icon"
           />
-          <div>&nbsp;{time}</div>
+          <span>{time}</span>
         </div>
       </div>
     </div>

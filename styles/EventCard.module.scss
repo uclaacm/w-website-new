@@ -46,8 +46,19 @@
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
   margin-top: 15px;
+  gap: 0.5rem;
+}
+
+.time img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  margin-bottom: 2px;
 }
 
 .event-image-wrapper {
