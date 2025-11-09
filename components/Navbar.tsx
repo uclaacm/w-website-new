@@ -56,12 +56,11 @@ const Navbar = () => {
           </div>
           <div>
             <ul
-              className={styles['nav-item-list']}
-              id={clicked ? styles.active : ''}
+              className={`${styles['nav-item-list']} ${clicked ? styles.active : ''}`}
             >
               <li>
                 <Link href="/teamPage">
-                  <a className={styles['nav-item-list']}>Team</a>
+                  <a>Team</a>
                 </Link>
               </li>
               <li>
@@ -76,7 +75,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div id={styles['small-screen']}>
+          <div className={styles['small-screen']}>
             <i onClick={() => setClicked(!clicked)}>
               {clicked ? <FaTimes /> : <FaBars />}
             </i>
