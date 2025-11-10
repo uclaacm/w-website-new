@@ -60,7 +60,7 @@ const Navbar = () => {
             >
               <li>
                 <Link href="/teamPage">
-                  <a className={styles['nav-item-list']}>Team</a>
+                  <a>Team</a>
                 </Link>
               </li>
               <li>
