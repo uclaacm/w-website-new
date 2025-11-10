@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '../components/MainLayout';
-import discord from '../public/discord.png';
+import slack from '../public/acmwslack_1.png';
 import event1 from '../public/event1.png';
 import event2 from '../public/event2.png';
 import event3 from '../public/event3.png';
@@ -69,32 +69,6 @@ export default function Home({ committee }: Props): JSX.Element {
               />
             </div>
 
-            <div
-              style={{
-                    display: 'block',
-                    width: '95%',
-                    margin: '10px auto',
-                    backgroundColor: 'transparent',
-                    color: '#56B7A0',
-                    textAlign: 'center',
-                    fontWeight: '600',
-                    fontSize: '1.2rem',
-                    padding: '12px 0',
-                    border: '3px solid #56B7A0',
-                    borderRadius: '20px',
-                    letterSpacing: '0.3px',
-                    textDecoration: 'none',
-              }}
-            >
-              The ACM Internship Program is now open! Apply by October 14th! <br/>
-              <a
-                  style={{ padding: '2%', marginLeft: '2%', color: '#56B7A0'}}
-                  href="https://acm.cs.ucla.edu/internship"
-                >
-                  Join Us
-                </a>
-            </div>
-
             <div>
               <div className={styles.heading} style={{ margin: '1%' }}>
                 <h1 className={styles.title} style={{ margin: '5%' }}>
@@ -123,22 +97,8 @@ export default function Home({ committee }: Props): JSX.Element {
                 >
                   <Image src={ins} alt="Instagram logo" />
                 </a>
-
-                <a
-                  href="https://discord.gg/JjbSf45cY"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                <Image src={discord} alt="Discord logo" width={50} height={50} />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/acm-w-acm-ucla/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <Image src={slack} alt="Slack logo" />
                 <Image src={linkedin} alt="Linkedin logo" />
-                </a>
               </div>
             </div>
             <div

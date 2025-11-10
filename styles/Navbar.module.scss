@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-.nav-item-list#active {
+.nav-item-list.active {
   right: 0;
 }
 
@@ -56,10 +56,15 @@
 }
 
 #small-screen {
+  /* keep an ID fallback for global usage if needed, but expose a class for CSS Modules */
   display: none;
 }
 
-#small-screen i:hover {
+.small-screen {
+  display: none;
+}
+
+.small-screen i:hover {
   color: vars.$committee-color;
 }
 
@@ -88,6 +93,12 @@
     display: block;
   }
 
+  /* also expose the class-based selector for CSS Modules */
+  .small-screen {
+    display: block;
+  }
+
+  .small-screen i,
   #small-screen i {
     font-size: 24px;
     cursor: pointer;
