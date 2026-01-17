@@ -12,6 +12,17 @@ interface CardInterface {
 function EventCard({ header, body, time, img }: CardInterface) {
   // Only show image if it's not a default or empty value
   const hasImage = img && !img.includes('default');
+  
+  // Convert newlines to <br /> elements
+  const renderBodyWithLineBreaks = (text: string) => {
+    return text.split(/\n/).map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        {index < text.split(/\n/).length - 1 && <br />}
+      </React.Fragment>
+    ));
+  };
+  
   return (
     <div className={styles.container}>
       <div className={styles.text}>
@@ -32,11 +43,11 @@ function EventCard({ header, body, time, img }: CardInterface) {
                   alt={header}
                 />
               </div>
-              <div className={styles['body-text']}>{body}</div>
+              <div className={styles['body-text']}>{renderBodyWithLineBreaks(body)}</div>
             </>
           ) : (
             <div className={styles['body-text'] + ' ' + styles['full-width']}>
-              {body}
+              {renderBodyWithLineBreaks(body)}
             </div>
           )}
         </div>
