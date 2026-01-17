@@ -1,7 +1,6 @@
 @use "../styles/global_variables.module.scss" as vars;
 
 .container {
-  display: inline-block;
   position: relative;
   margin: 2rem, 4rem;
   width: 100%;
@@ -114,7 +113,6 @@
 
 @media (max-width: 1024px) {
   .body {
-    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
