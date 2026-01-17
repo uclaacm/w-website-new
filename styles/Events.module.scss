@@ -48,9 +48,12 @@
 
 .card {
   min-height: 200px;
+  height: 400px;
   text-align: center;
   margin-top: 2rem;
   margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .past-card {

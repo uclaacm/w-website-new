@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '../components/MainLayout';
+import discord from '../public/discord.png';
 import event1 from '../public/event1.png';
 import event2 from '../public/event2.png';
 import event3 from '../public/event3.png';
@@ -12,7 +13,6 @@ import icon1 from '../public/icon1.png';
 import illustration from '../public/Illustration2.png';
 import ins from '../public/ins.png';
 import linkedin from '../public/LinkedIn_logo_initials_1.png';
-import discord from '../public/discord.png';
 import padding1 from '../public/padding1.png';
 import padding2 from '../public/padding2.png';
 import padding3 from '../public/padding3.png';
@@ -95,21 +95,32 @@ export default function Home({ committee }: Props): JSX.Element {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image src={ins} alt="Instagram logo" width={60} height={60} />
+                  <Image
+                    src={ins}
+                    alt="Instagram logo"
+                    width={60}
+                    height={60}
+                  />
                 </a>
                 <a
                   href="https://discord.gg/f9a9gCpD"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image src={discord} alt="Discord logo" width={60} height={60} />
+                  <Image
+                    src={discord}
+                    alt="Discord logo"
+                    width={60}
+                    height={60}
+                  />
                 </a>
-                <a
-                  href={committee.igLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={linkedin} alt="Linkedin logo" width={60} height={60} />
+                <a href={committee.igLink} target="_blank" rel="noreferrer">
+                  <Image
+                    src={linkedin}
+                    alt="Linkedin logo"
+                    width={60}
+                    height={60}
+                  />
                 </a>
               </div>
             </div>

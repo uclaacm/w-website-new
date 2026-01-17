@@ -56,7 +56,9 @@ const Navbar = () => {
           </div>
           <div>
             <ul
-              className={`${styles['nav-item-list']} ${clicked ? styles.active : ''}`}
+              className={`${styles['nav-item-list']} ${
+                clicked ? styles.active : ''
+              }`}
             >
               <li>
                 <Link href="/teamPage">
