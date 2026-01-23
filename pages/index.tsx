@@ -95,12 +95,7 @@ export default function Home({ committee }: Props): JSX.Element {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image
-                    src={ins}
-                    alt="Instagram logo"
-                    width={60}
-                    height={60}
-                  />
+                  <Image src={ins} alt="Instagram logo" />
                 </a>
                 <Image src={slack} alt="Slack logo" />
                 <Image src={linkedin} alt="Linkedin logo" />
@@ -266,7 +261,7 @@ export default function Home({ committee }: Props): JSX.Element {
                   style={{ display: 'inline-block' }}
                   className={styles.subtitle}
                 >
-                  Tech Fellowship{' '}
+                  Tech FellowShip{' '}
                 </h2>
                 <p style={{ display: 'inline-block' }} className={styles.lead}>
                   Winter Quarter
