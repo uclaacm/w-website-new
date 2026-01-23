@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '../components/MainLayout';
-import discord from '../public/discord.png';
+import slack from '../public/acmwslack_1.png';
 import event1 from '../public/event1.png';
 import event2 from '../public/event2.png';
 import event3 from '../public/event3.png';
@@ -102,26 +102,8 @@ export default function Home({ committee }: Props): JSX.Element {
                     height={60}
                   />
                 </a>
-                <a
-                  href="https://discord.gg/f9a9gCpD"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src={discord}
-                    alt="Discord logo"
-                    width={60}
-                    height={60}
-                  />
-                </a>
-                <a href={committee.igLink} target="_blank" rel="noreferrer">
-                  <Image
-                    src={linkedin}
-                    alt="Linkedin logo"
-                    width={60}
-                    height={60}
-                  />
-                </a>
+                <Image src={slack} alt="Slack logo" />
+                <Image src={linkedin} alt="Linkedin logo" />
               </div>
             </div>
             <div
