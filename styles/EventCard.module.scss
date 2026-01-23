@@ -1,14 +1,13 @@
 @use "../styles/global_variables.module.scss" as vars;
 
 .container {
+  display: inline-block;
   position: relative;
   margin: 2rem, 4rem;
   width: 100%;
-  height: 400px;
+  min-height: 100;
   border-radius: 15px;
   box-shadow: 0 0 10px 4px #f5f0f0;
-  display: flex;
-  flex-direction: column;
 }
 
 .text {
@@ -17,9 +16,6 @@
   margin: 30px;
   margin-bottom: 15px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 .header {
