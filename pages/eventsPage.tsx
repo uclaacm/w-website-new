@@ -90,9 +90,6 @@ export default function Events({ events }: Props) {
 
         <div className={styles['past-events-container']}>
           <h2 className={styles.subtitle}>Past Events</h2>
-          <p className={styles['past-events-description']}>
-            Check out our past events!
-          </p>
           <div className={styles['past-events-grid']}>{pastEventCards}</div>
         </div>
       </div>

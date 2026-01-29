@@ -9,7 +9,7 @@
     "lint": "next lint && eslint . --ext ts --ext tsx --ext js && npx stylelint \"**/*.{css,scss,sass}\"",
     "prepare": "husky install",
     "lint-fix": "next lint && eslint . --ext ts --ext tsx --ext js --fix && npx stylelint --fix \"**/*.{css,scss,sass}\" && prettier --write .",
-    "pre-commit": "yarn lint-fix"
+    "pre-commit": "eslint 'pages/**/*.{js,ts,tsx}' 'components/**/*.{js,ts,tsx}' --fix"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",

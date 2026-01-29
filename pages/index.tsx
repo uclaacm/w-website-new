@@ -261,7 +261,7 @@ export default function Home({ committee }: Props): JSX.Element {
                   style={{ display: 'inline-block' }}
                   className={styles.subtitle}
                 >
-                  Tech FellowShip{' '}
+                  Tech Fellowship{' '}
                 </h2>
                 <p style={{ display: 'inline-block' }} className={styles.lead}>
                   Winter Quarter

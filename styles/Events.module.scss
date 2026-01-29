@@ -49,8 +49,7 @@
 .card {
   min-height: 200px;
   text-align: center;
-  margin-top: 2rem;
-  margin-left: 1rem;
+  margin: 1rem;
 }
 
 .past-card {
@@ -64,6 +63,16 @@
   gap: 2rem;
   align-items: flex-start;
   margin-top: 2rem;
+}
+
+/* Grid that contains event cards on the events page */
+.boardgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* space between cards */
+  justify-content: flex-start;
+  padding: 0 2rem; /* padding on the sides of the screen */
+  box-sizing: border-box;
 }
 
 .calendar-container {
