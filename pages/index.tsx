@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '../components/MainLayout';
-import slack from '../public/acmwslack_1.png';
+import discord from '../public/discord.png';
 import event1 from '../public/event1.png';
 import event2 from '../public/event2.png';
 import event3 from '../public/event3.png';
@@ -12,7 +12,6 @@ import group from '../public/groupphoto.png';
 import icon1 from '../public/icon1.png';
 import illustration from '../public/Illustration2.png';
 import ins from '../public/ins.png';
-import linkedin from '../public/LinkedIn_logo_initials_1.png';
 import padding1 from '../public/padding1.png';
 import padding2 from '../public/padding2.png';
 import padding3 from '../public/padding3.png';
@@ -95,10 +94,17 @@ export default function Home({ committee }: Props): JSX.Element {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image src={ins} alt="Instagram logo" />
+                  <Image src={ins} alt="Instagram logo" width={44} height={44} className={styles['social-icon']} />
                 </a>
-                <Image src={slack} alt="Slack logo" />
-                <Image src={linkedin} alt="Linkedin logo" />
+                {/* Placeholder link for Discord; replace href="#" with your real invite URL when ready */}
+                <a
+                  href="https://discord.gg/Sdvja4mJYQ"
+                  id="discord-link"
+                  title="Discord (placeholder)"
+                  aria-label="Discord"
+                >
+                  <Image src={discord} alt="Discord logo" width={44} height={44} className={styles['social-icon']} />
+                </a>
               </div>
             </div>
             <div
@@ -261,7 +267,7 @@ export default function Home({ committee }: Props): JSX.Element {
                   style={{ display: 'inline-block' }}
                   className={styles.subtitle}
                 >
-                  Tech FellowShip{' '}
+                  Tech Fellowship{' '}
                 </h2>
                 <p style={{ display: 'inline-block' }} className={styles.lead}>
                   Winter Quarter
