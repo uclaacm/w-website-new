@@ -94,14 +94,16 @@ export default function Home({ committee }: Props): JSX.Element {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image src={ins} alt="Instagram logo" width={44} height={44} className={styles.socialIcon} />
+                  <Image src={ins} alt="Instagram logo" width={44} height={44} className={styles['social-icon']} />
                 </a>
                 {/* Placeholder link for Discord; replace href="#" with your real invite URL when ready */}
-                <a 
-                  href="https://discord.gg/Sdvja4mJYQ" id="discord-link" 
-                  title="Discord (placeholder)" aria-label="Discord"
+                <a
+                  href="https://discord.gg/Sdvja4mJYQ"
+                  id="discord-link"
+                  title="Discord (placeholder)"
+                  aria-label="Discord"
                 >
-                  <Image src={discord} alt="Discord logo" width={44} height={44} className={styles.socialIcon} />
+                  <Image src={discord} alt="Discord logo" width={44} height={44} className={styles['social-icon']} />
                 </a>
               </div>
             </div>

@@ -5,7 +5,7 @@
   width: 38.5vw; /* increased ~10% from 35vw */
   max-width: 900px;
   min-width: 320px;
-  height: 40vh;
+  height: 45vh; /* increased so images (especially square posters) can be larger */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding: 1rem 1rem 0.5rem 1rem;
+  padding: 1rem 1rem 0.5rem;
   box-sizing: border-box;
   min-height: 0; /* allow child .body to shrink and scroll within flex parent */
 }
@@ -44,8 +44,9 @@
 }
 
 .event-image-wrapper {
-  flex: 0 0 30%;
-  max-width: 30%;
+  /* Give the image column more room so square posters can be larger */
+  flex: 0 0 35%;
+  max-width: 35%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,18 +54,22 @@
 }
 
 .event-image {
+  /* Fill the image wrapper as much as possible while preserving aspect ratio.
+    This makes square posters larger, and long/tall images shorter when needed. */
   width: 100%;
-  height: auto; /* let image keep aspect ratio; center vertically in wrapper via flex alignment */
+  height: 100%;
+  max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
-  object-position: center center; /* ensure image is centered within its box */
+  object-fit: contain; /* scale image to fit without cropping */
+  object-position: center center;
   border-radius: 8px;
   display: block;
 }
 
 .body-text {
-  flex: 1 1 70%;
-  max-width: 70%;
+  /* take remaining ~65% when image column is 35% */
+  flex: 1 1 65%;
+  max-width: 65%;
   color: #000;
   overflow: auto; /* allow inner text column to scroll if needed */
   white-space: pre-line; /* preserve newline characters (from Google Sheets) while still wrapping text */
